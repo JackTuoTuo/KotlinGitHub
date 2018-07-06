@@ -14,15 +14,15 @@ import android.os.Bundle
  */
 interface ILifecycle {
 
-    fun onCreate(savedInstanceSate:Bundle?)
+    fun onCreate(savedInstanceState: Bundle?)
 
-    fun saveInstanceState(outState:Bundle)
+    fun onStart()
 
-    fun onViewStateRestored(savedInstanceSate: Bundle?)
+    fun onSaveInstanceState(outState: Bundle)
 
-    fun onConfigurationChanaged(newConfig:Configuration)
+    fun onViewStateRestored(savedInstanceState: Bundle?)
 
-    fun onSart()
+    fun onConfigurationChanged(newConfig: Configuration)
 
     fun onResume()
 

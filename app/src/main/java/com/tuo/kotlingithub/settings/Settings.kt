@@ -1,6 +1,7 @@
-package com.tuo.kotlingithub
+package com.tuo.kotlingithub.settings
 
-import com.tuo.common.Preference
+import com.tuo.common.ext.Preference
+import com.tuo.kotlingithub.AppContext
 
 /**
  * <pre>

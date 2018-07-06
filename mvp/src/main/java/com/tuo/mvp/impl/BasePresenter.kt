@@ -10,37 +10,29 @@ import com.tuo.mvp.IPresenter
  *     author : Tuo
  *     e-mail : 839539179@qq.com
  *     time   : 2018/7/5
- *     desc   :
+ *     desc   : BasePresenter
  *     version: 1.0
  * </pre>
  */
-abstract class BasePresenter<out V: IMvpView<BasePresenter<V>>>: IPresenter<V> {
+abstract class BasePresenter<out V : IMvpView<BasePresenter<V>>> : IPresenter<V> {
 
-    override fun onCreate(savedInstanceSate: Bundle?) {
+    override lateinit var view: @UnsafeVariance V
 
-    }
+    override fun onCreate(savedInstanceSate: Bundle?) = Unit
 
-    override fun saveInstanceState(outState: Bundle) {
-    }
+    override fun onSaveInstanceState(outState: Bundle) = Unit
 
-    override fun onViewStateRestored(savedInstanceSate: Bundle?) {
-    }
+    override fun onViewStateRestored(savedInstanceSate: Bundle?) = Unit
 
-    override fun onConfigurationChanaged(newConfig: Configuration) {
-    }
+    override fun onConfigurationChanged(newConfig: Configuration) = Unit
 
-    override fun onSart() {
-    }
+    override fun onStart() = Unit
 
-    override fun onResume() {
-    }
+    override fun onResume() = Unit
 
-    override fun onPause() {
-    }
+    override fun onPause() = Unit
 
-    override fun onStop() {
-    }
+    override fun onStop() = Unit
 
-    override fun onDestroy() {
-    }
+    override fun onDestroy() = Unit
 }

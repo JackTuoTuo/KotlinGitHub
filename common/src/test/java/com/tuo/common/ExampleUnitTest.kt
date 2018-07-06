@@ -1,5 +1,7 @@
 package com.tuo.common
 
+import com.tuo.common.ext.otherWise
+import com.tuo.common.ext.yes
 import junit.framework.Assert
 import org.junit.Test
 

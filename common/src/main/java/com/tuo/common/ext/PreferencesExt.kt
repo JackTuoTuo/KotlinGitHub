@@ -1,4 +1,4 @@
-package com.tuo.common
+package com.tuo.common.ext
 
 import android.annotation.SuppressLint
 import android.content.Context
@@ -16,7 +16,10 @@ import kotlin.reflect.KProperty
  */
 
 
-class Preference<T>(val context: Context, val name: String, val defaultValue: T, val preferenceName: String = "default")
+class Preference<T>(private val context: Context,
+                    private val name: String,
+                    private val defaultValue: T,
+                    private val preferenceName: String = "default")
     : ReadWriteProperty<Any?, T> {
 
     private val prefs by lazy {
